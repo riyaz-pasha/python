@@ -28,11 +28,7 @@ class Schedular:
         return process.burstTime>0
     
     def timeRequired(self,process):
-        if(process.burstTime>=self.timeQuantum):
-            timeRequiredToRunCurrentProcess= self.timeQuantum
-        else:
-            timeRequiredToRunCurrentProcess= process.burstTime
-        return timeRequiredToRunCurrentProcess
+        return self.timeQuantum if process.burstTime>=self.timeQuantum else process.burstTime
 
     def update(self,process,timeRequired,currentTime):
         process.burstTime=process.burstTime-timeRequired
