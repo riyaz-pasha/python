@@ -1,6 +1,9 @@
 n=int(input())
-arr = []
-
-for i in range(n):
-    ele = int(input())
-    arr.append(ele)
+largest=0
+currentNum=0
+while(n!=0):
+    currentNum=n%10
+    if(currentNum>largest):
+        largest=currentNum
+    n=n/10
+print(largest)
