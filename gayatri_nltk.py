@@ -20,3 +20,10 @@ print(my_dict)
 print("---------------------------------------")
 for action, values in my_dict.items():
     print(action + " : ",len(values))
+
+print("---------------------------------------")
+noun_count= len(my_dict.get("NN",[])) +len(my_dict.get("NNS",[])) +len(my_dict.get("NNP",[])) +len(my_dict.get("NNPS",[]))  
+print("NOUN : " , noun_count)
+
+verb_count= len(my_dict.get("VB",[])) +len(my_dict.get("VBD",[])) +len(my_dict.get("VBG",[])) +len(my_dict.get("VBN",[]))+len(my_dict.get("VBP",[]))+len(my_dict.get("VBZ",[]))
+print("VERB : " , verb_count)
